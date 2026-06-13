@@ -699,5 +699,4 @@ $usbClassBase = "HKLM:\SYSTEM\CurrentControlSet\Services\Class\USB"
             exit 
         }
     }
-
 } while ($choice.ToUpper() -ne "Q")"
