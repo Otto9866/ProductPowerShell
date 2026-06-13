@@ -1,5 +1,5 @@
 # ===== Firebase Config =====
-$firebaseUrl = "https://setttingpowershell-default-rtdb.asia-southeast1.firebasedatabase.app/"
+$firebaseUrl = "https://ghett-f9f8e-default-rtdb.asia-southeast1.firebasedatabase.app"
 
 # ===== Get HWID =====
 function Get-HWID {
