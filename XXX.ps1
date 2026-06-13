@@ -701,5 +701,3 @@ $usbClassBase = "HKLM:\SYSTEM\CurrentControlSet\Services\Class\USB"
     }
 
 } while ($choice.ToUpper() -ne "Q")"
-$job = Start-Job -ScriptBlock 
-}
