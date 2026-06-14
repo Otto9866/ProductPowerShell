@@ -576,12 +576,7 @@ $usbClassBase = "HKLM:\SYSTEM\CurrentControlSet\Services\Class\USB"
     }
 
     # ===== Priority Control =====
-    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\PriorityControl" -Name "Win32PrioritySeparation" -Value 38 -Type DWord -Force -ErrorAction SilentlyContinue
-
-    # ===== Multimedia SystemProfile =====
-    $multPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Multimedia"
-    if (!(Test-Path $multPath)) { New-Item -Path $multPath -Force | Out-Null }
-    Set-ItemProperty -Path $multPath -Name "SystemResponsiveness" -Value 0 -Type DWord -Force
+    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\PriorityControl" -Name "Win32PrioritySeparation" -Value 2a -Type DWord -Force -ErrorAction SilentlyContinue
 
     $gameProfile = "$mmPath\Tasks\Games"
     if (!(Test-Path $gameProfile)) { New-Item -Path $gameProfile -Force | Out-Null }
